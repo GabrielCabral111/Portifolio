@@ -1,1 +1,24 @@
 @import "tailwindcss";
+body {
+  background-color: #071d31;
+}
+@keyframes flip {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+.animate-flip {
+  display: inline-block;
+  animation: flip 1s ease forwards;
+  transform-origin: top;
+}
