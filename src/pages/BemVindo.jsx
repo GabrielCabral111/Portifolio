@@ -46,57 +46,64 @@ function BemVindo() {
 
   return (
     <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-[#0C3153] to-black text-white overflow-hidden">
-      {/* Fundo animado de LEDs */}
       <LEDBackground />
 
-      {/* Conteúdo */}
+     <Link to="/portfolio" className="absolute top-6 left-6 w-18 h-18 sm:w-25 sm:h-25 md:w-25 md:h-25 lg:w-15 lg:h-15 object-contain rounded-full shadow-[0_0_25px_5px_rgba(0,200,255,0.4)] z-20">
+      <img
+         src="/Logo.png"
+          alt="Logo"
+          />
+       
+      </Link>
+
+      
       <div className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="w-full max-w-3xl flex flex-col items-center justify-center">
           <SplineScene />
 
-          <h1 className="text-3xl sm:text-4xl font-bold mt-2">
+          <h1 className="text-3xl font-bold mt-2 sm:text-4xl sm:mt-3  md:text-5xl lg:text-4xl lg:mt-1 ">
             <span className={messages[currentMsg].color}>{displayedText}</span>
           </h1>
 
-          <h3 className="mt-3 sm:text-xl">
+          <h3 className="mt-4 text-[16px]  sm:mt-5 sm:text-2xl md:text-3xl md:mt-5 lg:text-2xl lg:mt-2 text-white">
             Estudante de Análise e Desenvolvimento de Sistemas
           </h3>
 
-          {/* Ícones */}
-          <div className="flex gap-8 mt-5">
-            <a
+          
+          <div className="flex gap-8 mt-5 sm:mt-7 lg:mt-6">
+            <Link
               href="https://github.com/seuusuario"
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl text-white hover:text-blue-500 transition duration-300"
+              rel="GitHub "
+              className="text-5xl sm:text-6xl lg:text-4xl text-white hover:text-blue-500 transition duration-300"
             >
               <FaGithub />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://www.linkedin.com/in/gabrielcabral-111gc"
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl text-white hover:text-blue-500 transition duration-300"
+              rel="Linkedin "
+              className="text-5xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
             >
               <FaLinkedin />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://instagram.com/seuusuario"
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-4xl text-white hover:text-blue-500 transition duration-300"
+              rel="Instagram "
+              className="text-5xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
             >
               <FaInstagram />
-            </a>
+            </Link>
           </div>
 
-          {/* Botão */}
-          <div className="flex justify-center mt-4">
+          
+          <div className="flex justify-center mt-6 sm:mt-10 lg:mt-3" >
             <Link
               to="/portfolio"
-              className="px-6 py-2 border-2 border-white text-white rounded-lg 
+              className="px-11 py-4 sm:px-11 sm:py-4 text-2xl sm:text-3xl border-2 lg:px-3 lg:py-1 lg:text-[20px] lg:mt-4  border-white text-white rounded-lg 
                          bg-transparent hover:text-blue-600 hover:border-blue-600 
                          transition duration-300"
             >
