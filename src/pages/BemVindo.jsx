@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SplineScene from "../components/SplineScene";
 import LEDBackground from "../components/LEDBackground";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 
 function BemVindo() {
@@ -48,9 +49,9 @@ function BemVindo() {
     <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-[#0C3153] to-black text-white overflow-hidden">
       <LEDBackground />
 
-     <Link to="/portfolio" className="absolute top-6 left-6 w-18 h-18 sm:w-25 sm:h-25 md:w-25 md:h-25 lg:w-15 lg:h-15 object-contain rounded-full shadow-[0_0_25px_5px_rgba(0,200,255,0.4)] z-20">
+     <Link to="/portfolio" className="absolute top-6 left-6 w-18 h-18 sm:w-25 sm:h-25 md:w-25 md:h-25 lg:w-15 lg:h-15 object-contain rounded-full  z-20">
       <img
-         src="/Logo.png"
+         src={logo}
           alt="Logo"
           />
        
