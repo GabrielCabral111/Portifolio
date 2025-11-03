@@ -4,7 +4,7 @@ import SobreMim from "../components/SobreMim";
 import Visualizacao from "../components/Visualizacao ";
 import Projetos from "../components/Projetos";
  import FaleComigo from "../components/FaleComigo";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 
 function Portfolio() {
   return (
@@ -33,9 +33,9 @@ function Portfolio() {
           <FaleComigo />
         </section>
 
-        {/* <footer id="footer">
+        <footer id="footer">
           <Footer />
-        </footer> */}
+        </footer>
       </div>
     </main>
   );

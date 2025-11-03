@@ -1,69 +1,129 @@
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 import emailjs from "emailjs-com";
+import { useState } from "react";
 
 export default function FaleComigo() {
-  const form = useRef();
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    mensagem: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setStatus("Enviando...");
 
-    emailjs
-      .sendForm(
-        "seu_service_id",
-        "seu_template_id",
-        form.current,
-        "sua_public_key"
-      )
+    emailjs.send(
+  "service_4byv9b4",
+  "template_xr6cc8h",
+  {
+    name: formData.nome,
+    email: formData.email,
+    message: formData.mensagem,
+    time: new Date().toLocaleString("pt-BR"), // adiciona horário opcionalmente
+  },
+  "3kHashnqieJHDjnkS"
+)
+
       .then(
-        (result) => {
-          alert("Email enviado com sucesso!");
+        () => {
+          setStatus("✅ Mensagem enviada com sucesso!");
+          setFormData({ nome: "", email: "", mensagem: "" });
         },
         (error) => {
-          alert("Erro ao enviar: " + error.text);
+          console.error(error);
+          setStatus("❌ Erro ao enviar. Tente novamente.");
         }
       );
   };
 
   return (
     <section
-      id="contato"
-      className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-6"
+      id="fale-comigo"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#12031f] via-[#15052b] to-[#0a0013] text-white overflow-hidden px-8 py-20"
     >
-      <h2 className="text-3xl font-bold mb-6">Fale Comigo</h2>
-
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="flex flex-col gap-4 w-full max-w-md"
-      >
-        <input
-          type="text"
-          name="user_name"
-          placeholder="Seu nome"
-          className="p-3 rounded bg-gray-800 border border-gray-600 focus:outline-none"
-          required
-        />
-        <input
-          type="email"
-          name="user_email"
-          placeholder="Seu e-mail"
-          className="p-3 rounded bg-gray-800 border border-gray-600 focus:outline-none"
-          required
-        />
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Sua mensagem..."
-          className="p-3 rounded bg-gray-800 border border-gray-600 focus:outline-none"
-          required
-        />
-        <button
-          type="submit"
-          className="border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center w-full max-w-6xl">
+        {/* Formulário */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="bg-[#14082E]/70 border border-purple-700/40 backdrop-blur-xl shadow-[0_0_30px_rgba(140,60,255,0.3)] p-8 rounded-2xl"
         >
-          Enviar
-        </button>
-      </form>
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            Fale <span className="text-purple-400">Comigo</span>
+          </h2>
+
+          <form onSubmit={sendEmail} className="flex flex-col space-y-5">
+            <input
+              type="text"
+              name="nome"
+              value={formData.nome}
+              onChange={handleChange}
+              placeholder="Nome"
+              required
+              className="bg-transparent border border-purple-600/50 rounded-full px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:border-purple-400"
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email"
+              required
+              className="bg-transparent border border-purple-600/50 rounded-full px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:border-purple-400"
+            />
+            <textarea
+              name="mensagem"
+              value={formData.mensagem}
+              onChange={handleChange}
+              placeholder="Mensagem"
+              rows="4"
+              required
+              className="bg-transparent border border-purple-600/50 rounded-2xl px-4 py-3 text-gray-200 placeholder-gray-400 focus:outline-none focus:border-purple-400"
+            ></textarea>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-gradient-to-r from-purple-600 to-sky-500 text-white font-semibold py-3 rounded-full mt-2 shadow-[0_0_15px_rgba(140,60,255,0.5)] hover:shadow-[0_0_25px_rgba(140,60,255,0.8)] transition-all"
+              type="submit"
+            >
+              Enviar
+            </motion.button>
+          </form>
+
+          {status && (
+            <p className="text-center mt-4 text-sm text-gray-300">{status}</p>
+          )}
+        </motion.div>
+
+        {/* Lado direito - Modelo 3D + texto */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="relative flex flex-col items-center justify-center text-center"
+        >
+          {/* Importação 3D */}
+          <div className="w-full h-[400px] md:h-[480px]">
+           <Spline scene="https://prod.spline.design/wMJHDpJJZCnMppCi/scene.splinecode" />
+          </div>
+
+          {/* Glow inferior simulando chão */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[400px] h-[60px] bg-purple-500/30 blur-[80px] rounded-full"></div>
+
+          
+        </motion.div>
+      </div>
     </section>
   );
 }
+
