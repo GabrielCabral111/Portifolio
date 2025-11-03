@@ -7,7 +7,7 @@ import logo from "../assets/Logo.png";
 import { FaUserAlt, FaCode, FaPhoneAlt } from "react-icons/fa";
 
 export default function Home() {
-  // Nenhum botão selecionado por padrão
+
   const [active, setActive] = useState(null);
 
   const links = [
@@ -18,14 +18,14 @@ export default function Home() {
 
   return (
     <section className=" w-full h-screen overflow-hidden">
-      {/* Fundo 3D do Spline */}
+      
       <div className=" ">
         <Spline scene="https://prod.spline.design/DtN4JPnelA2rkCe6/scene.splinecode" />
       </div>
 
-      {/* Header fixo com logo e menu */}
+     
       <header className="fixed top-0 left-0 w-full flex items-center justify-center p-6 z-20">
-        {/* Logo */}
+        
         <Link to="/portfolio" className="absolute top-4 left-8 rounded-full">
           <img
             src={logo}
@@ -34,7 +34,7 @@ export default function Home() {
           />
         </Link>
 
-        {/* Navegação */}
+       
         <nav className="relative flex items-center justify-center mt-4">
           <div className="flex bg-[#73A7BE]/90 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_0_20px_rgba(0,200,255,0.4)] overflow-hidden">
             {links.map((link) => (
@@ -51,7 +51,7 @@ export default function Home() {
                 {link.label}
                 <span className="text-lg">{link.icon}</span>
 
-                {/* Indicador animado quando ativo */}
+               
                 {active === link.id && (
                   <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-8 h-[3px] bg-sky-400 rounded-full transition-all"></span>
                 )}

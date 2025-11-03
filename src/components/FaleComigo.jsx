@@ -27,7 +27,7 @@ export default function FaleComigo() {
     name: formData.nome,
     email: formData.email,
     message: formData.mensagem,
-    time: new Date().toLocaleString("pt-BR"), // adiciona horário opcionalmente
+    time: new Date().toLocaleString("pt-BR"), 
   },
   "3kHashnqieJHDjnkS"
 )
@@ -50,7 +50,7 @@ export default function FaleComigo() {
       className="relative min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#12031f] via-[#15052b] to-[#0a0013] text-white overflow-hidden px-8 py-20"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center w-full max-w-6xl">
-        {/* Formulário */}
+        
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -105,19 +105,19 @@ export default function FaleComigo() {
           )}
         </motion.div>
 
-        {/* Lado direito - Modelo 3D + texto */}
+        
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="relative flex flex-col items-center justify-center text-center"
         >
-          {/* Importação 3D */}
+          
           <div className="w-full h-[400px] md:h-[480px]">
            <Spline scene="https://prod.spline.design/wMJHDpJJZCnMppCi/scene.splinecode" />
           </div>
 
-          {/* Glow inferior simulando chão */}
+          
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[400px] h-[60px] bg-purple-500/30 blur-[80px] rounded-full"></div>
 
           

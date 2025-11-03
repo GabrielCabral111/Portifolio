@@ -7,12 +7,12 @@ export default function Visualizacao() {
       id="visualizacao"
       className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-[#031B34]"
     >
-      {/* Fundo 3D do Spline */}
+      
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/nB7rVQXLBxMAByIu/scene.splinecode" />
       </div>
 
-      {/* === IDEIA: Texto flutuante ou chamada de transição === */}
+      
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function Visualizacao() {
         </p>
       </motion.div>
 
-      {/* === IDEIA FUTURA: Botão flutuante ou âncora de navegação === */}
+      
       <a
         href="#projetos"
         className="absolute bottom-8 text-sky-400 font-semibold hover:text-white transition"
