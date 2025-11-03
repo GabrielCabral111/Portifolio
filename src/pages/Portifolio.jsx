@@ -2,8 +2,8 @@
 import Home from "../components/Home";
 import SobreMim from "../components/SobreMim";
 import Visualizacao from "../components/Visualizacao ";
-// import Projetos from "../components/Projetos";
-//  import FaleComigo from "../components/FaleComigo";
+import Projetos from "../components/Projetos";
+ import FaleComigo from "../components/FaleComigo";
 // import Footer from "../components/Footer";
 
 function Portfolio() {
@@ -25,13 +25,13 @@ function Portfolio() {
           <Visualizacao />
         </section>
 
-        {/* <section id="projetos">
+        <section id="projetos">
           <Projetos />
-        </section> */}
+        </section>
 
-        {/* <section id="fale-comigo">
+        <section id="fale-comigo">
           <FaleComigo />
-        </section> */}
+        </section>
 
         {/* <footer id="footer">
           <Footer />
