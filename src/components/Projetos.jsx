@@ -3,33 +3,33 @@ import { motion } from "framer-motion";
 export default function Projetos() {
   const projetos = [
     {
-      nome: "Alcatteia",
-      desc: "Plataforma de gestão de equipes com foco em bem-estar e conexão entre líderes e times.",
-      img: "/images/alcatteia.png",
+      nome: "Respira coral",
+      desc: "Site de conscientização sobre a importância das florestas e do ar puro para a vida no planeta.",
+      img: "/images/respira.png",
       link: "https://exemplo.com/alcatteia",
     },
     {
-      nome: "Elevuz",
-      desc: "Assistente bancário acessível para idosos e pessoas com deficiência visual.",
-      img: "/images/elevuz.png",
+      nome: "TerraXplore",
+      desc: "Site didático , O projeto busca despertar a curiosidade científica e promover a conscientização sobre as causas e consequências desses fenômenos na Terra",
+      img: "/images/terra.png",
       link: "https://exemplo.com/elevuz",
     },
     {
-      nome: "Qual é a Boa?",
-      desc: "Site de turismo acessível com mapa interativo e narração de trajetos.",
-      img: "/images/qual-e-a-boa.png",
+      nome: "Dengoo",
+      desc: "Plataforma interativa criada para celebrar e valorizar quem amamos.",
+      img: "/images/dengo.png",
       link: "https://exemplo.com/qual-e-a-boa",
     },
     {
-      nome: "Portfolio 3D",
-      desc: "Experiência interativa com Spline e React, simulando ambientes 3D futuristas.",
-      img: "/images/portfolio3d.png",
+      nome: "Alcatteia",
+      desc: "Plataforma de gestão de equipes com foco em bem-estar e conexão entre líderes e times. ",
+      img: "/images/alca.png",
       link: "https://exemplo.com/portfolio3d",
     },
     {
-      nome: "Insight Lab",
-      desc: "Dashboard inteligente para análise de equipes e bem-estar organizacional.",
-      img: "/images/insightlab.png",
+      nome: "Em Produçáo",
+      desc: "Kanban inteligente que entende o ritmo, o humor e o foco do usuário, ajudando a organizar tarefas de forma mais humana e adaptável",
+      img: "/images/insight.png",
       link: "https://exemplo.com/insightlab",
     },
   ];
@@ -60,10 +60,7 @@ export default function Projetos() {
               whileHover={{ y: -10, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 250 }}
               className={`relative bg-[#0B001A]/80 border border-[#8A2BE2]/30 rounded-2xl overflow-hidden shadow-[inset_0_0_25px_rgba(130,0,255,0.25),0_0_20px_rgba(100,0,255,0.3)] hover:shadow-[0_0_40px_rgba(150,0,255,0.5)] backdrop-blur-lg transition-all duration-500 group
-                ${
-                  // Centraliza os dois últimos itens (índices 3 e 4)
-                  i >= 3 && "lg:col-span-1 lg:justify-self-center"
-                }`}
+                ${i >= 3 ? "lg:col-span-1 lg:justify-self-center" : ""}`}
             >
               {/* Imagem */}
               <div className="w-full h-48 overflow-hidden">

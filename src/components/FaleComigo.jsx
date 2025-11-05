@@ -52,9 +52,9 @@ export default function FaleComigo() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center w-full max-w-6xl">
         
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
+          initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
           className="bg-[#14082E]/70 border border-purple-700/40 backdrop-blur-xl shadow-[0_0_30px_rgba(140,60,255,0.3)] p-8 rounded-2xl"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">
@@ -91,8 +91,8 @@ export default function FaleComigo() {
             ></textarea>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 0.45 }}
+              whileTap={{ scale: 0.57 }}
               className="bg-gradient-to-r from-purple-600 to-sky-500 text-white font-semibold py-3 rounded-full mt-2 shadow-[0_0_15px_rgba(140,60,255,0.5)] hover:shadow-[0_0_25px_rgba(140,60,255,0.8)] transition-all"
               type="submit"
             >
