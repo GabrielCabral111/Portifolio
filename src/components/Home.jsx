@@ -18,7 +18,7 @@ export default function Home() {
   return (
    <section id="home" className="relative w-full min-h-screen overflow-hidden flex flex-col">
   {/* Fundo 3D ajustado */}
-  <div className="  inset-0 w-full h-full z-0">
+  <div className=" absolute inset-0 w-full h-full z-0">
     <Spline scene="https://prod.spline.design/DtN4JPnelA2rkCe6/scene.splinecode" />
   </div>
 
@@ -29,13 +29,13 @@ export default function Home() {
       <img
         src={logo}
         alt="Logo"
-        className="w-25 h-25 sm:w-16 sm:h-16 object-contain rounded-full"
+        className="w-15 h-15 sm:w-25 sm:h-25 object-contain rounded-full"
       />
     </a>
 
     {/* Botão hambúrguer (somente mobile) */}
     <button
-      className="absolute right-8 top-8 text-white text-4xl md:hidden z-30"
+      className="absolute right-8 top-6 text-white text-4xl md:hidden z-30"
       onClick={() => setMenuOpen(!menuOpen)}
     >
       {menuOpen ? <FaTimes /> : <FaBars />}
