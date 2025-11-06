@@ -123,11 +123,14 @@ export default function Projetos() {
 
           {/* Controles */}
           <div className="flex justify-between mt-10 w-full">
-            <button className="text-white text-2xl p-2 hover:text-purple-400 transition">
+            <button 
+            onClick={prevSlide} className="text-white text-2xl p-2 hover:text-purple-400 transition">
   <FaArrowLeft />
 </button>
 
-<button className="text-white text-2xl p-2 hover:text-purple-400 transition">
+<button
+ onClick={nextSlide} 
+ className="text-white text-2xl p-2 hover:text-purple-400 transition">
   <FaArrowRight />
 </button>
           </div>
