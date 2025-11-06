@@ -29,7 +29,7 @@ export default function Home() {
       <img
         src={logo}
         alt="Logo"
-        className="w-15 h-15 sm:w-25 sm:h-25 object-contain rounded-full"
+        className="w-15 h-15 sm:w-20 sm:h-20 object-contain rounded-full"
       />
     </a>
 

@@ -76,7 +76,7 @@ function BemVindo() {
               href="https://github.com/seuusuario"
               target="_blank"
               rel="GitHub "
-              className="text-5xl sm:text-6xl lg:text-4xl text-white hover:text-blue-500 transition duration-300"
+              className="text-4xl sm:text-6xl lg:text-4xl text-white hover:text-blue-500 transition duration-300"
             >
               <FaGithub />
             </Link>
@@ -85,7 +85,7 @@ function BemVindo() {
               href="https://www.linkedin.com/in/gabrielcabral-111gc"
               target="_blank"
               rel="Linkedin "
-              className="text-5xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
+              className="text-4xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
             >
               <FaLinkedin />
             </Link>
@@ -94,7 +94,7 @@ function BemVindo() {
               href="https://instagram.com/seuusuario"
               target="_blank"
               rel="Instagram "
-              className="text-5xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
+              className="text-4xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
             >
               <FaInstagram />
             </Link>
@@ -104,7 +104,7 @@ function BemVindo() {
           <div className="flex justify-center mt-6 sm:mt-10 lg:mt-3" >
             <Link
               to="/portfolio"
-              className="px-11 py-4 sm:px-11 sm:py-4 text-2xl sm:text-3xl border-2 lg:px-3 lg:py-1 lg:text-[20px] lg:mt-4  border-white text-white rounded-lg 
+              className="px-6 py-2 sm:px-11 sm:py-4  text-2xl sm:text-3xl border-1 lg:px-6 lg:py-2 lg:text-[20px] lg:mt-4  border-white text-white rounded-3xl 
                          bg-transparent hover:text-blue-600 hover:border-blue-600 
                          transition duration-300"
             >

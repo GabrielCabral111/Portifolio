@@ -20,18 +20,18 @@ export default function FaleComigo() {
     e.preventDefault();
     setStatus("Enviando...");
 
-    emailjs.send(
-  "service_4byv9b4",
-  "template_xr6cc8h",
-  {
-    name: formData.nome,
-    email: formData.email,
-    message: formData.mensagem,
-    time: new Date().toLocaleString("pt-BR"), 
-  },
-  "3kHashnqieJHDjnkS"
-)
-
+    emailjs
+      .send(
+        "service_4byv9b4",
+        "template_xr6cc8h",
+        {
+          name: formData.nome,
+          email: formData.email,
+          message: formData.mensagem,
+          time: new Date().toLocaleString("pt-BR"),
+        },
+        "3kHashnqieJHDjnkS"
+      )
       .then(
         () => {
           setStatus("✅ Mensagem enviada com sucesso!");
@@ -50,11 +50,11 @@ export default function FaleComigo() {
       className="relative min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#12031f] via-[#15052b] to-[#0a0013] text-white overflow-hidden px-8 py-20"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center w-full max-w-6xl">
-        
+        {/* FORMULÁRIO */}
         <motion.div
-          initial={{ opacity: 0, x: -10 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="bg-[#14082E]/70 border border-purple-700/40 backdrop-blur-xl shadow-[0_0_30px_rgba(140,60,255,0.3)] p-8 rounded-2xl"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">
@@ -91,8 +91,8 @@ export default function FaleComigo() {
             ></textarea>
 
             <motion.button
-              whileHover={{ scale: 0.45 }}
-              whileTap={{ scale: 0.57 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-purple-600 to-sky-500 text-white font-semibold py-3 rounded-full mt-2 shadow-[0_0_15px_rgba(140,60,255,0.5)] hover:shadow-[0_0_25px_rgba(140,60,255,0.8)] transition-all"
               type="submit"
             >
@@ -105,25 +105,20 @@ export default function FaleComigo() {
           )}
         </motion.div>
 
-        
+        {/* ANIMAÇÃO 3D */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5,  }}
           className="relative flex flex-col items-center justify-center text-center"
         >
-          
           <div className="w-full h-[400px] md:h-[480px]">
-           <Spline scene="https://prod.spline.design/wMJHDpJJZCnMppCi/scene.splinecode" />
+            <Spline scene="https://prod.spline.design/wMJHDpJJZCnMppCi/scene.splinecode" />
           </div>
 
-          
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[400px] h-[60px] bg-purple-500/30 blur-[80px] rounded-full"></div>
-
-          
         </motion.div>
       </div>
     </section>
   );
 }
-

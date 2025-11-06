@@ -4,7 +4,7 @@ import { FaDownload } from "react-icons/fa";
 
 export default function SobreMim() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-20 bg-gradient-to-b from-[#022253] to-[#3A366C] text-white text-center">
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-20 bg-gradient-to-b from-[#021c42] to-[#2d2a55] text-white text-center">
       
       {/* Efeito de fundo */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-sky-500/20 blur-[120px] rounded-full"></div>
@@ -46,7 +46,7 @@ export default function SobreMim() {
 
         {/* Botão de download */}
         <a
-          href="/curriculo-gabriel.pdf"
+          href="#"
           download="GabrielCabral-Curriculo.pdf"
           className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-sky-400 rounded-xl font-medium text-white hover:opacity-90 transition-all shadow-lg hover:shadow-sky-400/40 mb-19"
         >
