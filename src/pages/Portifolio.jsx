@@ -11,7 +11,7 @@ function Portfolio() {
     <main className="relative min-h-screen bg-gradient-to-b from-[#0C3153] to-black text-white overflow-hidden">
        
 
-      {/* Conteúdo principal com rolagem suave */}
+     
       <div className="relative z-10 flex flex-col  scroll-smooth">
         <section id="home">
           <Home />

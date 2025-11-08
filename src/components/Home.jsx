@@ -17,14 +17,14 @@ export default function Home() {
 
   return (
    <section id="home" className="relative w-full min-h-screen overflow-hidden flex flex-col">
-  {/* Fundo 3D ajustado */}
+
   <div className=" absolute inset-0 w-full h-full z-0">
     <Spline scene="https://prod.spline.design/DtN4JPnelA2rkCe6/scene.splinecode" />
   </div>
 
-  {/* Header fixo */}
+  
   <header className="fixed top-0 left-0 w-full flex items-center justify-center p-6 z-20">
-    {/* Logo */}
+    
     <a href="#home" className="absolute top-4 left-8 rounded-full">
       <img
         src={logo}
@@ -33,7 +33,7 @@ export default function Home() {
       />
     </a>
 
-    {/* Botão hambúrguer (somente mobile) */}
+    {/* Menu hambúrguer*/}
     <button
       className="absolute right-8 top-6 text-white text-4xl md:hidden z-30"
       onClick={() => setMenuOpen(!menuOpen)}
@@ -41,7 +41,7 @@ export default function Home() {
       {menuOpen ? <FaTimes /> : <FaBars />}
     </button>
 
-    {/* Menu desktop */}
+   
     <nav className="hidden md:flex relative items-center justify-center mt-4">
       <div className="flex bg-[#73A7BE]/90 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_0_20px_rgba(0,200,255,0.4)] overflow-hidden">
         {links.map((link) => (
@@ -67,7 +67,7 @@ export default function Home() {
       </div>
     </nav>
 
-    {/* Menu mobile */}
+    
     {menuOpen && (
       <div className="absolute top-20 right-8 flex flex-col bg-[#73A7BE]/95 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_0_20px_rgba(0,200,255,0.4)] overflow-hidden md:hidden">
         {links.map((link) => (

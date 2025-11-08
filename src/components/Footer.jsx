@@ -10,7 +10,7 @@ export default function Footer() {
         transition={{ duration: 0.8 }}
         className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-center md:text-left space-y-4 md:space-y-0"
       >
-        {/* Logo / Nome */}
+        
         <div>
           <h3 className="text-lg font-semibold text-purple-400">
             © {new Date().getFullYear()} Gabriel Cabral
@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Ícones sociais */}
+       
         <div className="flex space-x-6 text-2xl">
           <motion.a
             href="https://github.com/seuusuario"
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
       </motion.div>
 
-      {/* Glow sutil no fundo */}
+      
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[80px] bg-purple-600/30 blur-[90px] rounded-full"></div>
     </footer>
   );

@@ -51,10 +51,10 @@ export default function Projetos() {
 >
 
 
-      {/* Glow da mesa */}
+      
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[300px] bg-purple-600/30 blur-[320px] rounded-full"></div>
 
-      {/* === PAINEL HOLOGRÁFICO PARA DESKTOP === */}
+      
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function Projetos() {
         </div>
       </motion.div>
 
-      {/* === CARROSSEL PARA MOBILE === */}
+     {/*MOBILE*/}
       <div className="sm:hidden relative z-10 flex flex-col items-center w-full max-w-md mt-8">
         <div className="relative w-full overflow-hidden">
           <motion.div
@@ -121,7 +121,7 @@ export default function Projetos() {
             </div>
           </motion.div>
 
-          {/* Controles */}
+          
           <div className="flex justify-between mt-10 w-full">
             <button 
             onClick={prevSlide} className="text-white text-2xl p-2 hover:text-purple-400 transition">
@@ -137,7 +137,7 @@ export default function Projetos() {
         </div>
       </div>
 
-      {/* === MODAL DETALHES DO PROJETO === */}
+      
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -179,7 +179,7 @@ export default function Projetos() {
         )}
       </AnimatePresence>
 
-      {/* Luz inferior animada */}
+      
       <motion.div
         animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.1, 1] }}
         transition={{ duration: 6, repeat: Infinity }}

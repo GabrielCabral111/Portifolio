@@ -6,10 +6,10 @@ export default function SobreMim() {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-20 bg-gradient-to-b from-[#021c42] to-[#2d2a55] text-white text-center">
       
-      {/* Efeito de fundo */}
+      
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-sky-500/20 blur-[120px] rounded-full"></div>
 
-      {/* Animação Spline */}
+      
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -20,7 +20,7 @@ export default function SobreMim() {
         <SplineScene />
       </motion.div>
 
-      {/* Texto */}
+      
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -44,7 +44,7 @@ export default function SobreMim() {
           Cada projeto é uma chance de evoluir e deixar uma marca com empatia, curiosidade e inovação.
         </p>
 
-        {/* Botão de download */}
+        {/* download */}
         <a
           href="#"
           download="GabrielCabral-Curriculo.pdf"

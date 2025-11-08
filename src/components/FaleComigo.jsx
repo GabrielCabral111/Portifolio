@@ -50,7 +50,7 @@ export default function FaleComigo() {
       className="relative min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#12031f] via-[#15052b] to-[#0a0013] text-white overflow-hidden px-8 py-20"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center w-full max-w-6xl">
-        {/* FORMULÁRIO */}
+        
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -105,7 +105,7 @@ export default function FaleComigo() {
           )}
         </motion.div>
 
-        {/* ANIMAÇÃO 3D */}
+        
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
