@@ -46,7 +46,7 @@ export default function SobreMim() {
 
         {/* download */}
         <a
-          href="#"
+          href=" #"
           download="GabrielCabral-Curriculo.pdf"
           className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-sky-400 rounded-xl font-medium text-white hover:opacity-90 transition-all shadow-lg hover:shadow-sky-400/40 mb-19"
         >
