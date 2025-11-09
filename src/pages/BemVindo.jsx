@@ -72,32 +72,32 @@ function BemVindo() {
 
           
           <div className="flex gap-8 mt-5 sm:mt-7 lg:mt-6">
-            <Link
-              href="https://github.com/seuusuario"
+            <a
+              href="https://github.com/GabrielCabral111"
               target="_blank"
               rel="GitHub "
               className="text-4xl sm:text-6xl lg:text-4xl text-white hover:text-blue-500 transition duration-300"
             >
               <FaGithub />
-            </Link>
+            </a>
 
-            <Link
-              href="https://www.linkedin.com/in/gabrielcabral-111gc"
+            <a
+              href="www.linkedin.com/in/gabrielcabral-111gc"
               target="_blank"
               rel="Linkedin "
               className="text-4xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
             >
               <FaLinkedin />
-            </Link>
+            </a>
 
-            <Link
-              href="https://instagram.com/seuusuario"
+            <a
+              href="https://www.instagram.com/cabral111_?igsh=eDRkMzAwaWM1dHFp&utm_source=qr"
               target="_blank"
               rel="Instagram "
               className="text-4xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
             >
               <FaInstagram />
-            </Link>
+            </a>
           </div>
 
           
