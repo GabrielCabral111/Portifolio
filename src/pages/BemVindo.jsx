@@ -82,7 +82,7 @@ function BemVindo() {
             </a>
 
             <a
-              href="www.linkedin.com/in/gabrielcabral-111gc"
+              href="https://www.linkedin.com/in/gabrielcabral-111gc/"
               target="_blank"
               rel="Linkedin "
               className="text-4xl sm:text-6xl lg:text-4xl  text-white hover:text-blue-500 transition duration-300"
